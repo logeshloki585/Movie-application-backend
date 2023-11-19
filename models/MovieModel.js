@@ -21,15 +21,11 @@ const MovieSchema = new Schema({
     },
     likes: {
         type: Number,
-        required: true,
+        // required: true,
         default:0
     },
     description: {
         type: String,
-        required: true
-    },
-    genre: {
-        type: [String],
         required: true
     },
     actors: [
@@ -47,7 +43,7 @@ const MovieSchema = new Schema({
         type: Number,
         required: true
     },
-    country: {
+    rating: {
         type: String,
         required: true
     },

@@ -48,7 +48,7 @@ const updateMovieDetails = async (req, res, next) => {
 
 const deleteMovieById = async (req, res, next) => {
     const { id } = req.params;
-
+    console.log(id)
     try {
         const deletedMovie = await Movie.findByIdAndDelete(id);
 
@@ -74,6 +74,7 @@ const addMovie = async (req ,res, next ) => {
         description,
         genre,
         actors,
+        rating,
         runtime,
         country,
         posterURL,
@@ -90,6 +91,7 @@ const addMovie = async (req ,res, next ) => {
         runtime,
         country,
         posterURL,
+        rating,
         verticalBanner
     })
 
